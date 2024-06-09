@@ -25,7 +25,7 @@ shell_tool.description = shell_tool.description + f"args {shell_tool.args}".repl
     "{", "{{"
 ).replace("}", "}}")
 agent = initialize_agent(
-    [shell_tool], llm, agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION, verbose=True
+    [shell_tool], llm, agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION, verbose=True, handle_parsing_errors=True,
 )
 
 
